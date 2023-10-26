@@ -1,0 +1,5 @@
+name: libyang2
+on: push
+jobs:
+  libyang2:
+    uses: gardenlinux/package-build/.github/workflows/build_pkg.yml@main

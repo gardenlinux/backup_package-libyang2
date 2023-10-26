@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+version="$(grep -oP '(?<=#v)[0-9\.]+$' <<< "$SOURCE")"
+sed -i 's/{{ version }}/'"$version"'/;s/{{ release }}/1/' distro/pkg/deb/changelog
